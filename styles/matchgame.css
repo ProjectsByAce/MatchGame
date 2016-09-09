@@ -1,0 +1,76 @@
+body{
+    text-align: center;
+    background-image: url("../images/bg.jpg");
+}
+
+#game{
+    width: 502px;
+    height: 462px;
+    margin: 0 auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    background-image: url("../images/table.jpg");
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+#cards{
+    width: 380px;
+    height: 400px;
+    position: relative;
+}
+
+.card{
+    width: 80px;
+    height: 120px;
+    margin-left: 6px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s;
+}
+
+.font{
+    background: #999 url("../images/deck.png") 0 -480px;
+    z-index: 10;
+}
+
+.back{
+    background: #efefef url("../images/deck.png");
+    -webkit-transform: rotateY(-180deg);
+    z-index: 8;
+}
+
+.face:hover{
+    -webkit-box-shadow: 0 0 40px #aaa;
+}
+
+.cardAJ {background-position: -80px -360px;}
+.cardAQ {background-position: -400px -120px;}
+.cardAK {background-position: -560px 0;}
+.cardBJ {background-position: -800px -240px;}
+.cardBQ {background-position: -880px -240px;}
+.cardBK {background-position: -960px -240px;}
+
+.card-flipped .font{
+    z-index:8;
+    -webkit-transform: rotateY(180deg);
+}
+
+.card-flipped .back{
+    z-index: 10;
+    -webkit-transform: rotateY(0deg);
+}
+
+.card-removed{
+    opacity: 0;
+}
